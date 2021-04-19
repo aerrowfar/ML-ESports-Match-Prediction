@@ -1,9 +1,9 @@
 
-Predicting outcome of e-sports matches using reinforcement learning contextual bandits. 
+**Predicting outcome of e-sports matches using reinforcement learning contextual bandits.** 
 
 This contextual bandit approach using Vowpal Wabbit library aims to predict the winner of a League of Legends professional match using 10 distinct features. 
 
-The features used are:
+**The features used are:**
 
 1)Champs1- This is a list of champions picked by the 1st team in a list formatted as a string. E.g [‘Nautilus’,’Diana’,’Xerath’,’Miss Fortune’,’Leona’]
 
@@ -27,7 +27,7 @@ The features used are:
 
 Raw data can be obtained from https://oracleselixir.com/.
 
-A total of 4 contextual bandit learning methods can be used:
+**A total of 4 contextual bandit learning methods can be used:**
 
 CB2 - optimize predictor based on already collected data, or contextual bandits without exploration. ‘2’ indicates a total of 2 actions, action space does not change.
 
