@@ -1,9 +1,11 @@
 
 **Predicting outcome of e-sports matches using reinforcement learning contextual bandits.** 
 
-This contextual bandit approach using Vowpal Wabbit library aims to predict the winner of a League of Legends professional match using 10 distinct features. 
+Academic paper link: https://drive.google.com/file/d/1c2or-AecvCPWI3LFk3dHfrw3jiNqcE-X/view?usp=sharing
 
-**The features used are:**
+This contextual bandit approach using Vowpal Wabbit library aims to predict the winner of a League of Legends professional match using 10 distinct features. My team and I spent significant time feature engineering using domain knowledge and conducting ablation studies for best possible results using a wide breadth of bandit algorithms. We were able to achieve 71.61% on 7 years of data using features 5 to 10 and Epsilon-Greedy 0.2 exploration method. We also conducted the same experiement through supervised learning, using binary classification and aiming for min log loss, to achieve 75.8% accuracy. All results and our findings are discussed in the paper linked above.
+
+**Features:**
 
 1)Champs1- This is a list of champions picked by the 1st team in a list formatted as a string. E.g [‘Nautilus’,’Diana’,’Xerath’,’Miss Fortune’,’Leona’]
 
@@ -27,7 +29,7 @@ This contextual bandit approach using Vowpal Wabbit library aims to predict the 
 
 Raw data can be obtained from https://oracleselixir.com/.
 
-**A total of 4 contextual bandit learning methods can be used:**
+**Contextual Bandit Algorithms:**
 
 CB2 - optimize predictor based on already collected data, or contextual bandits without exploration. ‘2’ indicates a total of 2 actions, action space does not change.
 
@@ -37,4 +39,4 @@ CB Bag 3- This exploration rule is based on an ensemble approach. It takes in an
 
 CB Cover 3- This is a theoretically optimal exploration algorithm based on this paper. Like bagging, many different policies are trained, with the number specified as an argument m. Unlike bagging, the training of these policies is explicitly optimized to result in a diverse set of predictions, choosing all the actions which are not already learned to be bad in a given context. This is the most sophisticated of the available options for contextual bandit learning. ‘3’ in this case is m. 
 
-The RL agent can achieve 71.61% on 7 years of data using features 5 to 10 and Epsilon-Greedy 0.2 exploration method.
+
